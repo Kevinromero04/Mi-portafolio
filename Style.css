@@ -1,0 +1,73 @@
+body{
+    margin: 0px;
+    font-family: "Segoe IU", sans-serif;
+    background-color: #d5d7d8;
+}
+.navegador{
+    background-color: #2C3E50;
+    height: 12vh;
+    display: flex;
+    width: 100%;
+    color: white;
+    flex-wrap: wrap;
+    
+
+}
+.nombre{
+    display: flex;
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+
+
+}
+.sobre_mi{
+    margin: 0;
+    display: flex;
+    width: 70%;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+.sobre_mi h2{
+    border-left: black solid 3px;
+    padding: 1vh;
+    width: 18vh;
+    text-align: center;
+}
+#sobre_mi{
+    border: none;
+}
+
+.presentacion{
+    border: black solid 2px;
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+
+}
+.informacion{
+    height: 80vh;
+    width: 40%;
+    letter-spacing: 0.2em;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.foto{
+    height: 80vh;
+    width: 40%;
+    background-color: blue;
+}
+.informacion h2, p{
+    width: 50vh;
+}
+.informacion h2{
+    font-weight: 900; 
+}
