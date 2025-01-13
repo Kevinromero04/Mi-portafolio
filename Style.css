@@ -1,73 +1,215 @@
 body{
     margin: 0px;
     font-family: "Segoe IU", sans-serif;
-    background-color: #d5d7d8;
+
+}
+header{
+    background-color: hsl(228, 15%, 15%);
+    border-bottom: black solid 2px;
 }
 .navegador{
-    background-color: #2C3E50;
+    background-color: rgba(0, 0, 0, 0.6);
     height: 12vh;
     display: flex;
     width: 100%;
     color: white;
     flex-wrap: wrap;
-    
+    backdrop-filter: blur(8px);
 
 }
 .nombre{
     display: flex;
-    width: 30%;
+    width: 40%;
     align-items: center;
     justify-content: center;
     font-size: large;
 
 
 }
-.sobre_mi{
+.barra{
     margin: 0;
     display: flex;
-    width: 70%;
+    width: 60%;
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-around;
 
 }
-.sobre_mi h2{
-    border-left: black solid 3px;
+.barra h2{
     padding: 1vh;
     width: 18vh;
     text-align: center;
 }
-#sobre_mi{
+#barra{
     border: none;
 }
 
 .presentacion{
-    border: black solid 2px;
-    height: 80vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
     
-
-}
-.informacion{
-    height: 80vh;
-    width: 40%;
-    letter-spacing: 0.2em;
-    background-color: red;
+    background-color: hsl(228, 15%, 15%);
+    
+    height: 100vh;
+    width: 99.%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+
+}
+.informacion{
+    height: 100%;
+    width: 50%;
+    flex-wrap: wrap;
+    color: white;
+    display: flex;
+    justify-content: center;
     flex-direction: column;
 }
 .foto{
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+    flex-wrap: wrap;
+}
+
+.contenedor{
+    display: flex;
+    width: 150vh;
+    border: green 3px solid;
+    height: 90vh;
+    flex-wrap: wrap;
+    
+}
+.foto img{
+    height: 60vh;
+    mask-image: linear-gradient(to bottom, hsla(var(--hue), 40%, 16%) 60%, transparent 100%);
+    border-radius: 20px 20px 20px 20px;
+}
+.saludo {
+    display: flex;
+    text-align: center;
+    margin: 0;
+}
+.presentacion h3{
+    margin: 0;
+    font-size: 3rem;
+}
+h4{
+    font-size: 2rem;
+    margin: 0;
+    margin-top: 10px;
+}
+.sobre-mi{
+    width: 70vh;
+
+
+}
+.sobre-mi p{
+    padding-right: 10vh;
+}
+#color{
+    color: rgb(94, 205, 246);
+
+}
+.prueba{
+    display: flex;
+    justify-content: center;
+    column-gap: 1.25rem;
+    justify-content: initial;
+    padding-top: 4vh;
+
+}
+.iconos {
+    height: 4vh;
+    width: 4vh;
+    display: flex;
+    background-color: brown;
+    padding: .5rem;
+    color: var(--title-color);
+    margin-left: 5px;
+    font-size: 1.5rem;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    transition: transform .4s;
+    
+}
+.Info{
+    display: flex;
+    height: 100%;
+    background-color: rgb(44, 44, 44);
+    gap: 10vh;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10vh;
+
+}
+.tarjetas{
+    height: 48vh;
+    border-radius: 5vh;
+    border: rgb(0, 0, 0) solid 2px;
+    width: 55vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.tarjetas p{
+    color: rgb(239, 235, 235);
+    margin: 0;
+    padding: 2vh;
+    text-align: center;
+}
+.tarjetas li{
+    padding-right: 2vh;
+    padding-bottom: 10px;
+}
+#linkedin{
+    border-radius: 1vh;
+}
+.skills{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 20px;   
+    column-gap: 50px; 
+    width: 100%;
+}
+.categorias{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 23vh;
+    border: red solid 2px;
+    border-radius: 3vh;
+    width: 23vh;
+    flex-direction: column;
+}
+
+#python:hover{
+    height: 21vh;
+    width: 21vh;
+    
+}
+.skills2{
+    color: white;
     height: 80vh;
-    width: 40%;
-    background-color: blue;
+    background-color: hsl(228, 15%, 15%);
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    justify-content: center;
+    align-items: center;
 }
-.informacion h2, p{
-    width: 50vh;
+.skills2 h1{
+    margin: 0;
+    font-size: 2rem;
 }
-.informacion h2{
-    font-weight: 900; 
+.categorias img{
+    height: 10vh;
 }
