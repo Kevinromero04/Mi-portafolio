@@ -1,11 +1,16 @@
-body{
-    margin: 0px;
-    font-family: "Segoe IU", sans-serif;
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #1e1e2f, #3c3c57);
+    color: #ffffff;
 
 }
 header{
     background-color: hsl(228, 15%, 15%);
     border-bottom: black solid 2px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 .navegador{
     background-color: rgba(0, 0, 0, 0.6);
@@ -46,7 +51,7 @@ header{
 
 .presentacion{
     
-    background-color: hsl(228, 15%, 15%);
+    background: linear-gradient(135deg, #2a2a3d, #1e1e2f);
     
     height: 100vh;
     width: 99.%;
@@ -54,8 +59,9 @@ header{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
 }
+
 .informacion{
     height: 100%;
     width: 50%;
@@ -64,6 +70,15 @@ header{
     display: flex;
     justify-content: center;
     flex-direction: column;
+}
+
+
+.contenedor{
+    display: flex;
+    width: 150vh;
+    height: 90vh;
+    flex-wrap: wrap;
+    
 }
 .foto{
     height: 100%;
@@ -74,18 +89,10 @@ header{
     flex-wrap: wrap;
 }
 
-.contenedor{
-    display: flex;
-    width: 150vh;
-    border: green 3px solid;
-    height: 90vh;
-    flex-wrap: wrap;
-    
-}
-.foto img{
-    height: 60vh;
-    mask-image: linear-gradient(to bottom, hsla(var(--hue), 40%, 16%) 60%, transparent 100%);
-    border-radius: 20px 20px 20px 20px;
+.foto img {
+    height: 75%; 
+    mask-image: linear-gradient(to bottom, hsla(210, 40%, 16%, 1) 60%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, hsla(210, 40%, 16%, 1) 60%, transparent 100%);
 }
 .saludo {
     display: flex;
@@ -137,7 +144,7 @@ h4{
 .Info{
     display: flex;
     height: 100%;
-    background-color: rgb(44, 44, 44);
+    background: linear-gradient(135deg, rgb(44, 44, 44), rgb(30, 30, 30));
     gap: 10vh;
     justify-content: center;
     align-items: center;
@@ -148,15 +155,24 @@ h4{
 .tarjetas{
     height: 48vh;
     border-radius: 5vh;
-    border: rgb(0, 0, 0) solid 2px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
     width: 55vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     color: white;
     backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
 }
+.tarjetas:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4); 
+    background: rgba(255, 255, 255, 0.2); 
+}
+
 .tarjetas p{
     color: rgb(239, 235, 235);
     margin: 0;
@@ -170,46 +186,108 @@ h4{
 #linkedin{
     border-radius: 1vh;
 }
-.skills{
-    
+
+.skills {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    row-gap: 20px;   
-    column-gap: 50px; 
+    row-gap: 20px;
+    column-gap: 50px;
     width: 100%;
 }
-.categorias{
+
+.categorias {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 23vh;
-    border: red solid 2px;
+    border: rgb(18, 18, 18) solid 2px;
     border-radius: 3vh;
     width: 23vh;
     flex-direction: column;
+    transition: all 0.3s ease-in-out;
 }
 
-#python:hover{
-    height: 21vh;
-    width: 21vh;
-    
+.categorias:hover {
+    transform: scale(1.1);
+    box-shadow: 0 25px 30px rgba(0, 0, 0, 0.2);
 }
-.skills2{
-    color: white;
-    height: 80vh;
-    background-color: hsl(228, 15%, 15%);
+
+.categorias:focus {
+    outline: 2px solid hsl(228, 100%, 50%);
+    outline-offset: 2px;
+}
+
+.skills2 {
+    background: linear-gradient(135deg, #3c3c57, #1e1e2f);
+    height: 100%;
     display: flex;
     flex-direction: column;
     gap: 5vh;
     justify-content: center;
     align-items: center;
+    padding: 2rem;
 }
+
+
 .skills2 h1{
     margin: 0;
     font-size: 2rem;
 }
 .categorias img{
     height: 10vh;
+}
+.proyectos{
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(135deg, rgb(44, 44, 44), rgb(30, 30, 30));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+.misProyectos{
+    display: flex;
+    height: 100%;
+    border: red solid 2px;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5vh;
+    padding: 5vh;
+}
+.tarjetasProyectos{
+    height: 35vh;
+    width: 55vh;
+    border: greenyellow 2px solid;
+}
+.certificaciones{
+    background: linear-gradient(135deg, #3c3c57, #1e1e2f);
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.misCertificaciones{
+    height: 55vh;
+    width: 80%;
+    border: aqua 2px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10vh;
+}
+.tarjetasCertificaciones{
+    height: 30vh;
+    width: 60vh;
+    border: greenyellow solid 2px;
+}
+.contacto{
+    height: 20vh;
+    width: 100%;
+    background: linear-gradient(135deg, rgb(44, 44, 44), rgb(30, 30, 30));
 }
