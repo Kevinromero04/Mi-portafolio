@@ -54,7 +54,6 @@ header{
     background: linear-gradient(135deg, #2a2a3d, #1e1e2f);
     
     height: 100vh;
-    width: 99.%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,7 +70,9 @@ header{
     justify-content: center;
     flex-direction: column;
 }
-
+.foto{
+    width: 50%;
+}
 
 .contenedor{
     display: flex;
@@ -80,14 +81,7 @@ header{
     flex-wrap: wrap;
     
 }
-.foto{
-    height: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 50%;
-    flex-wrap: wrap;
-}
+
 
 .foto img {
     height: 75%; 
@@ -109,7 +103,7 @@ header{
     margin-top: 10px;
 }
 .sobre-mi{
-    width: 70vh;
+    width: 100%;
 
 
 }
@@ -247,22 +241,25 @@ header{
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
+    flex-wrap: wrap;
 }
 .misProyectos{
     display: flex;
     height: 100%;
-    width: auto;
+    width: 80%;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 5vh;
     padding: 5vh;
+    margin-top: 0;
 }
-.tarjetasProyectos{
-    height: 35vh;
-    width: 55vh;
-    border: rgb(0, 0, 0) 2px solid;
-    border-radius: 2vh;
+.informacion *{
+
+    margin: 0;
+}
+.informacion p{
+    padding: 0;
 }
 .certificaciones{
     background: linear-gradient(135deg, #3c3c57, #1e1e2f);
@@ -284,7 +281,7 @@ header{
 }
 .tarjetasCertificaciones{
     height: 32vh;
-    width: 60vh;
+    width: 55vh;
     border: rgb(0, 0, 0) solid 2px;
     border-radius: 2vh;
     display: flex;
@@ -326,7 +323,7 @@ header{
 }
 
 .contacto{
-    height: 28vh;
+    height: 100%;
     width: 100%;
     background: linear-gradient(135deg, rgb(44, 44, 44), rgb(30, 30, 30));
     display: flex;
@@ -358,11 +355,37 @@ header{
 
 }
 .contacta p{
-    font-size: 0.7rem;
+    font-size: 1rem;
 }
 
 .contacta img{
     border-radius: 2vh;
     height: 4vh;
     margin: 10px;
+}
+.barra a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.tarjetasProyectos{
+    height: 35vh;
+    width: 49vh;
+    border: rgb(0, 0, 0) 2px solid;
+    border-radius: 2vh;
+    transition: all 0.3s ease-in-out;
+}
+
+.tarjetasProyectos:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 20px rgb(0, 0, 0);
+}
+
+.tarjetasProyectos:focus {
+    outline: 2px solid hsl(126, 100%, 50%);
+    outline-offset: 2px;
+}
+.tarjetasProyectos:hover img{
+    height: 100%;
 }
