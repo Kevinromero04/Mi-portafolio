@@ -103,7 +103,7 @@ header{
     margin: 0;
     font-size: 3rem;
 }
-h4{
+.sobre-mi h4{
     font-size: 2rem;
     margin: 0;
     margin-top: 10px;
@@ -251,7 +251,6 @@ h4{
 .misProyectos{
     display: flex;
     height: 100%;
-    border: red solid 2px;
     width: auto;
     justify-content: center;
     align-items: center;
@@ -262,32 +261,108 @@ h4{
 .tarjetasProyectos{
     height: 35vh;
     width: 55vh;
-    border: greenyellow 2px solid;
+    border: rgb(0, 0, 0) 2px solid;
+    border-radius: 2vh;
 }
 .certificaciones{
     background: linear-gradient(135deg, #3c3c57, #1e1e2f);
-    height: 70vh;
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 10vh;
+    padding-top: 10vh;
 }
 .misCertificaciones{
-    height: 55vh;
-    width: 80%;
-    border: aqua 2px solid;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10vh;
+    flex-wrap: wrap;
 }
 .tarjetasCertificaciones{
-    height: 30vh;
+    height: 32vh;
     width: 60vh;
-    border: greenyellow solid 2px;
+    border: rgb(0, 0, 0) solid 2px;
+    border-radius: 2vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    transition: all 0.3s ease-in-out;
+
 }
+
+.tarjetasProyectos img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1.5vh;
+  }
+  
+  .tarjetasCertificaciones img{
+    padding: 5px;
+    height: 15vh;
+    width: 13vh;
+    border-radius: 2vh 0vh 0vh 0vh;
+  }
+  .tarjetasCertificaciones h2,h3{
+    margin: 0;
+  }
+  #campus img{
+    height: 11vh;
+
+  }
+
+  .tarjetasCertificaciones:hover {
+    transform: scale(1.1);
+    box-shadow: 0 25px 30px rgba(0, 0, 0, 0.2);
+}
+
+.tarjetasCertificaciones:focus {
+    outline: 2px solid hsl(228, 100%, 50%);
+    outline-offset: 2px;
+}
+
 .contacto{
-    height: 20vh;
+    height: 28vh;
     width: 100%;
     background: linear-gradient(135deg, rgb(44, 44, 44), rgb(30, 30, 30));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contacto h2{
+    margin: 0;
+}
+
+.misContactos{
+    height: 20vh;
+    align-items: center;
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    column-gap: 5vh;
+    
+
+}
+.contacta{
+    height: 6vh;
+    width: 50vh;
+    display: flex;
+    align-items: center;
+
+
+}
+.contacta p{
+    font-size: 0.7rem;
+}
+
+.contacta img{
+    border-radius: 2vh;
+    height: 4vh;
+    margin: 10px;
 }
