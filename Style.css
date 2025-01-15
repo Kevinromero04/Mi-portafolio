@@ -31,15 +31,7 @@ header{
 
 
 }
-.barra{
-    margin: 0;
-    display: flex;
-    width: 60%;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-around;
 
-}
 .barra h2{
     padding: 1vh;
     width: 18vh;
@@ -72,6 +64,7 @@ header{
 }
 .foto{
     width: 50%;
+    height: 100%;
 }
 
 .contenedor{
@@ -388,4 +381,176 @@ header{
 }
 .tarjetasProyectos:hover img{
     height: 100%;
+}
+
+.barra {
+    margin: 0;
+    display: flex;
+    width: 60%;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.barra-item {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.barra-item::after {
+    content: "";
+    position: absolute;
+    bottom: -5px; 
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #515b66;
+    transform: scaleX(0); 
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out; 
+}
+
+.barra-item:hover::after {
+    transform: scaleX(1); 
+}
+
+.menu{
+    display: none;
+}
+.hamburguesa{
+    display: none;
+}
+@media (max-width: 792px){
+    .foto img{
+        height: 60%;
+    }
+    .foto{
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+        height: 90%;
+    }
+
+    .tarjetas{
+        height: 50vh;
+    }
+
+    .barra{
+        display: none;
+    }
+    .menu{
+        display: block;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 55%;
+    }
+    .menu img{
+        height: 5vh;
+    }
+
+    .menu:hover .hamburguesa {
+        display: block;
+        position: absolute;
+        top: 100%; /* Mostrar justo debajo del ícono */
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(8px);
+        width: 100%;
+        display: flex;
+        height: 30vh;
+        flex-direction: column;
+      }
+      .barra2{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2rem;
+        gap: 10px;
+        
+      }
+      .barra2 a{
+        text-decoration: none;
+        color: white;
+      }
+
+}
+@media(max-width:749px){
+    .contacto{
+        margin: 0;
+        padding: 0;
+        height: 40vh;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 15vh;
+    }
+}
+@media (max-width: 624px){
+    .foto img{
+        height: 50%;
+    }
+    .foto{
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+        height: 90%;
+    }
+    .contenedor{
+        height: 100%;
+    }
+    .tarjetas{
+        height: 100%;
+    }
+
+}
+@media (max-width: 526px){
+    .foto img{
+        height: 40%;
+    }
+    .foto{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90%;
+    }
+    .contenedor{
+        height: 100%;
+        align-items: center;
+    }
+}
+@media (max-width: 525px){
+    .foto img{
+        height: 40%;
+    }
+    .foto{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90%;
+    }
+    .presentacion{
+        height: 100vh;
+        align-items: center;
+    }
+    .saludo h3{
+        font-size: 2.5rem;
+    }
+    .sobre-mi h3{
+        font-size: 2rem;
+    }
+    .sobre-mi h4{
+        font-size: 1.5rem;
+        padding-bottom: 10px;
+    }
+}
+@media (max-width: 453px){
+    *{
+        display: none;
+    }
 }
