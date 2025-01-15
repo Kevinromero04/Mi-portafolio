@@ -48,11 +48,11 @@ Este proyecto es el portafolio personal de Kevin Romero, un desarrollador junior
 ## Cómo ejecutar el proyecto
 1. Clona este repositorio en tu máquina local:
    ```bash
-   git clone <URL_DEL_REPOSITORIO>
+   git clone <https://github.com/Kevinromero04/Mi-portafolio.git>
    ```
 2. Navega al directorio del proyecto:
    ```bash
-   cd <NOMBRE_DEL_DIRECTORIO>
+   cd <Mi-Portafolio>
    ```
 3. Abre el archivo `index.html` en tu navegador favorito.
 
